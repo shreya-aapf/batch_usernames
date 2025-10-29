@@ -1,1 +1,13 @@
 data/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyz
+*.pywz
+*.pyzw
+*.pyz
+*.pywz
+*.pyzw
+__pycache__/app.cpython-313.pyc
