@@ -2,10 +2,31 @@
 
 A Python utility that reads names/usernames from Excel files and outputs them in comma-separated batches. Available as both a **user-friendly web interface** and a command-line tool.
 
+## 🚀 Super Quick Start
+
+**Just downloaded? Get running in 30 seconds:**
+
+### Option 1: Universal Launcher (Any OS)
+1. **Double-click `START_HERE.py`** - Works on any operating system!
+2. Upload your Excel file!
+
+### Option 2: OS-Specific Scripts
+#### Windows
+1. Double-click `setup.bat` 
+2. Double-click `run.bat`
+
+#### macOS/Linux  
+1. Double-click `setup.sh` (or run `./setup.sh` in terminal)
+2. Double-click `run.sh` (or run `./run.sh` in terminal)
+
+> 📋 **See [QUICK_START.md](QUICK_START.md) for detailed instructions and troubleshooting**
+
 ## 🌟 Features
 
 - **Web Interface**: Easy-to-use drag-and-drop interface (recommended for most users)
 - **Command Line**: Power-user CLI interface for automation and scripting
+- **Cross-Platform**: Works on Windows, macOS, and Linux
+- **Easy Setup**: Automated installation scripts included
 - Read from any column in Excel files (.xlsx/.xls format)
 - Flexible column specification (by header name, Excel letter like 'A'/'AA', or zero-based index)
 - Configurable batch sizes (default: 50 per line)
@@ -14,17 +35,24 @@ A Python utility that reads names/usernames from Excel files and outputs them in
 - Support for multiple Excel sheets
 - Download complete output as text file
 
-## 🚀 Quick Start (Web Interface - Recommended)
+## 🎯 For Your Teammates
 
-### Installation
+This project is designed to be **teammate-friendly**! When sharing:
 
+1. **Zip the entire folder** and send it
+2. **No code changes needed** - everything works out of the box
+3. **Cross-platform** - works on Windows, macOS, and Linux
+4. **Simple setup** - just run the setup script for their OS
+
+## 📖 Detailed Usage
+
+### Web Interface (Recommended)
+
+**Quick Start:** Run `setup.bat` (Windows) or `./setup.sh` (macOS/Linux), then `run.bat` or `./run.sh`
+
+**Manual Installation:**
 ```bash
 pip install -r requirements.txt
-```
-
-### Run the Web App
-
-```bash
 streamlit run app.py
 ```
 

@@ -229,40 +229,8 @@ def main():
                     current_batch = batches[st.session_state.current_batch]
                     batch_text = ", ".join(map(str, current_batch))
                     
-                    # Create a text area that's easy to copy from
-                    st.text_area(
-                        f"Batch {st.session_state.current_batch + 1} ({len(current_batch)} names)",
-                        value=batch_text,
-                        height=150,
-                        help="Click in the text area and press Ctrl+A to select all, then Ctrl+C to copy"
-                    )
-                    
-                    # Alternative: Show as a code block (also easy to copy)
+                    # Show as a code block (easy to copy)
                     st.code(batch_text, language=None)
-                    
-                    # Quick copy buttons for different formats
-                    st.subheader("🔄 Quick Copy Options")
-                    
-                    copy_col1, copy_col2 = st.columns(2)
-                    
-                    with copy_col1:
-                        # Comma-separated (default)
-                        st.text_area(
-                            "Comma-separated:",
-                            value=batch_text,
-                            height=60,
-                            key=f"comma_{st.session_state.current_batch}"
-                        )
-                    
-                    with copy_col2:
-                        # Line-separated
-                        line_separated = "\n".join(map(str, current_batch))
-                        st.text_area(
-                            "Line-separated:",
-                            value=line_separated,
-                            height=60,
-                            key=f"lines_{st.session_state.current_batch}"
-                        )
                     
                     # Batch selector (alternative navigation)
                     st.subheader("🎯 Jump to Batch")
