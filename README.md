@@ -2,26 +2,57 @@
 
 A Python utility that reads names/usernames from Excel files and outputs them in comma-separated batches. Available as both a **user-friendly web interface** and a command-line tool.
 
-## 🚀 Super Quick Start
+## 🚀 Quick Start - Get Running in 2 Minutes!
 
-**Just downloaded? Get running in 30 seconds:**
+**Just downloaded? Here's how to get started:**
 
-### Step-by-Step Instructions
-#### Windows
-1. **Double-click `START_HERE.bat`** - Does setup and starts the app in one go!
+### Super Easy Way (Recommended)
 
-*Or manually:*
-1. Double-click `setup.bat` to install dependencies
-2. Double-click `run.bat` to start the app
+#### Windows Users
+1. **Double-click `START_HERE.bat`** - That's it! 
+2. Upload your Excel file when the browser opens
 
-#### macOS/Linux  
-1. **Double-click `START_HERE.sh`** - Does setup and starts the app in one go!
+#### macOS/Linux Users  
+1. **Double-click `START_HERE.sh`** - That's it!
+2. Upload your Excel file when the browser opens
 
-*Or manually:*
-1. Double-click `setup.sh` (or run `./setup.sh` in terminal) to install dependencies
-2. Double-click `run.sh` (or run `./run.sh` in terminal) to start the app
+### Manual Way (If above doesn't work)
 
-> 📋 **See [QUICK_START.md](QUICK_START.md) for detailed instructions and troubleshooting**
+#### Windows Users
+1. **Double-click** `setup.bat` to install dependencies
+2. **Double-click** `run.bat` to start the web interface
+3. Open your browser to the URL shown (usually http://localhost:8501)
+
+#### macOS/Linux Users
+1. **Right-click** on `setup.sh` → "Open with Terminal" (or open terminal and run `./setup.sh`)
+2. **Right-click** on `run.sh` → "Open with Terminal" (or run `./run.sh`)
+3. Open your browser to the URL shown (usually http://localhost:8501)
+
+### Command Line Alternative
+
+If the scripts don't work, you can run these commands:
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Start web interface  
+streamlit run app.py
+
+# Or use command line tool
+python batch_names_to_text.py --help
+```
+
+## 🛠️ What You Need
+
+- **Python 3.7+** (Download from https://python.org)
+- **Excel file** with your data
+
+## 🚨 Troubleshooting
+
+- **Python not found**: Install Python and make sure it's added to your PATH
+- **Permission denied**: Try running as administrator (Windows) or with `sudo` (macOS/Linux)
+- **Dependencies fail**: Try `pip install --user -r requirements.txt`
 
 ## 🌟 Features
 
@@ -46,25 +77,19 @@ This project is designed to be **teammate-friendly**! When sharing:
 3. **Cross-platform** - works on Windows, macOS, and Linux
 4. **Simple setup** - just run the setup script for their OS
 
-## 📖 Detailed Usage
+## 🎨 Web Interface Features
 
-### Web Interface (Recommended)
+The Streamlit web app provides:
 
-**Quick Start:** Run `setup.bat` (Windows) or `./setup.sh` (macOS/Linux), then `run.bat` or `./run.sh`
-
-**Manual Installation:**
-```bash
-pip install -r requirements.txt
-streamlit run app.py
-```
-
-This will open a web browser with an intuitive interface where you can:
-- 📁 Upload your Excel file
-- 🎯 Select columns and sheets visually  
-- ⚙️ Set batch size with a slider
-- 🧭 Navigate through batches with next/previous buttons
-- 📋 Copy batches with one click
-- 💾 Download the complete output
+- **File Upload**: Drag & drop Excel files (.xlsx/.xls)
+- **Sheet Selection**: Visual dropdown to choose Excel sheets
+- **Column Selection**: Three methods - by header name, Excel letter, or index
+- **Data Preview**: See your data before processing
+- **Batch Navigation**: Next/Previous buttons and jump-to-batch selector
+- **Copy Options**: Multiple formats (comma-separated, line-separated)
+- **Statistics**: Real-time counts of names and batches
+- **Download**: Get complete output as a text file
+- **Responsive Design**: Works on desktop and mobile
 
 ## 💻 Command Line Usage (Advanced)
 
@@ -93,7 +118,7 @@ python batch_names_to_text.py --excel data/users.xlsx --column Username --batch-
 python batch_names_to_text.py --excel data/users.xlsx --column B --sheet-index 1 --outfile sheet2_names
 ```
 
-## Output Format
+## 📄 Output Format
 
 The script creates a text file with comma-separated names, with each line containing up to the specified batch size:
 
@@ -104,20 +129,6 @@ name51, name52, name53, ..., name100
 
 ...
 ```
-
-## 🎨 Web Interface Features
-
-The Streamlit web app provides:
-
-- **File Upload**: Drag & drop Excel files (.xlsx/.xls)
-- **Sheet Selection**: Visual dropdown to choose Excel sheets
-- **Column Selection**: Three methods - by header name, Excel letter, or index
-- **Data Preview**: See your data before processing
-- **Batch Navigation**: Next/Previous buttons and jump-to-batch selector
-- **Copy Options**: Multiple formats (comma-separated, line-separated)
-- **Statistics**: Real-time counts of names and batches
-- **Download**: Get complete output as a text file
-- **Responsive Design**: Works on desktop and mobile
 
 ## 📋 Requirements
 
@@ -133,3 +144,7 @@ All dependencies are listed in `requirements.txt`:
 - Output files are automatically saved to your system's Downloads folder (CLI) or downloaded via browser (Web)
 - The script handles duplicate names and maintains original order
 - Web interface runs locally on your machine - no data is sent to external servers
+
+---
+
+**That's it! 🎉 Your teammates should be up and running in minutes.**
