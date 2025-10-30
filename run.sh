@@ -12,13 +12,6 @@ echo ""
 echo "Press Ctrl+C to stop the application"
 echo ""
 
-# Determine Python command
-if command -v python3 &> /dev/null; then
-    PYTHON_CMD="python3"
-else
-    PYTHON_CMD="python"
-fi
-
 # Start Streamlit
 streamlit run app.py
 

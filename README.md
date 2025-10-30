@@ -6,18 +6,20 @@ A Python utility that reads names/usernames from Excel files and outputs them in
 
 **Just downloaded? Get running in 30 seconds:**
 
-### Option 1: Universal Launcher (Any OS)
-1. **Double-click `START_HERE.py`** - Works on any operating system!
-2. Upload your Excel file!
-
-### Option 2: OS-Specific Scripts
+### Step-by-Step Instructions
 #### Windows
-1. Double-click `setup.bat` 
-2. Double-click `run.bat`
+1. **Double-click `START_HERE.bat`** - Does setup and starts the app in one go!
+
+*Or manually:*
+1. Double-click `setup.bat` to install dependencies
+2. Double-click `run.bat` to start the app
 
 #### macOS/Linux  
-1. Double-click `setup.sh` (or run `./setup.sh` in terminal)
-2. Double-click `run.sh` (or run `./run.sh` in terminal)
+1. **Double-click `START_HERE.sh`** - Does setup and starts the app in one go!
+
+*Or manually:*
+1. Double-click `setup.sh` (or run `./setup.sh` in terminal) to install dependencies
+2. Double-click `run.sh` (or run `./run.sh` in terminal) to start the app
 
 > 📋 **See [QUICK_START.md](QUICK_START.md) for detailed instructions and troubleshooting**
 
